@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+
+
+    <EditText
+        android:id="@+id/trackerName_edituser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileFrame"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Tracker Name"
+        android:textColor="#000000" >
+	
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/mobileNumber_edituser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trackerName_edituser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:hint="Enter Mobile Number" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobileNumber_edituser"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/trackerId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:hint="TrackerId" />
+
+        <EditText
+            android:id="@+id/trackerPin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#000000"
+            
+            android:hint="TrackerPin" />
+    </LinearLayout>
+
+
+    
+    <FrameLayout
+                android:id="@+id/profileFrame"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                
+                android:layout_alignParentTop="true"
+                
+                android:layout_marginLeft="10dp"
+                
+                android:clickable="true"
+
+                android:layout_marginTop="60dp"
+                android:background="@drawable/profile_icon"
+                 android:layout_centerHorizontal="true" >
+
+                <ImageView
+                    android:id="@+id/profilePic"
+                    android:layout_margin="4dp"
+                    
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+       
+        
+        
+        />
+            </FrameLayout>
+
+    
+    <!-- <TextView 
+        
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="30dp"
+       style="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:text="Add Another "
+        android:textColor="#FE5722"
+       
+        /> -->
+
+ 
+    
+       <!-- <Button
+        android:id="@+id/geofenceedit"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_weight="1"
+        android:background="#FE5722"
+         android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="20dp"
+        android:text="Set GeoFence"
+        android:textColor="#ffffff" />-->
+        
+      
+        
+        
+    <Button
+        android:id="@+id/save_geofenceEdit"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#FE5722"
+        android:text="Save"
+        android:textColor="#ffffff" />
+
+
+</RelativeLayout>

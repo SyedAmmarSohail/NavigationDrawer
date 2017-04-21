@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardlist_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="@dimen/cardview_default_elevation">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+
+        android:background="#55ffffff"
+        >
+
+        /////////////////////////////////////
+
+        <RelativeLayout
+            android:id="@+id/editRl"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:visibility="invisible"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/childProfilePic_edit"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/profile_icon_inner_simple" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/childProfilePic_edit"
+                android:layout_marginLeft="10dp">
+
+                <EditText
+                    android:id="@+id/childName_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text_default_material_light"
+                    android:textSize="@dimen/abc_text_size_subhead_material"
+                    android:hint="Name"
+                    />
+                <!--<TextView
+                    android:id="@+id/geofenceName_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/primary_text_default_material_light"
+
+                    android:text="Geofence"
+                    />-->
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/save_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/deletetracker_edit"
+                android:src="@drawable/tik" />
+
+            <ImageView
+                android:id="@+id/deletetracker_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                 />
+
+        </RelativeLayout>
+
+        ////////////////////////////////////////
+
+        <RelativeLayout
+            android:id="@+id/min"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:visibility="visible"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/childProfilePic"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/profile_icon_inner_simple" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/childProfilePic"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/childName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/primary_text_default_material_light"
+                    android:textSize="@dimen/abc_text_size_subhead_material"
+                    android:text="Name"
+                     />
+                <TextView
+                    android:id="@+id/geofenceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/primary_text_default_material_light"
+
+                    android:text="Geofence"
+                    />
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/deletetracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/edittracker"
+                android:src="@drawable/bin" />
+
+            <ImageView
+                android:id="@+id/edittracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/edit" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/geofenceMap"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/geofence"
+            android:layout_below="@+id/min"
+
+
+            android:alpha="0.4"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/min"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Set Geofence"/>
+
+
+    </RelativeLayout>
+
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/listitem_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android version name"
+            android:textColor="@color/primary_text_default_material_light"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+
+        <TextView
+            android:id="@+id/listitem_subname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="Test"
+            android:textColor="@color/secondary_text_default_material_light"
+            android:textSize="@dimen/abc_text_size_caption_material" />
+    </LinearLayout>-->
+
+</android.support.v7.widget.CardView>
